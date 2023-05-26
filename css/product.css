@@ -1,0 +1,400 @@
+/*-------------------------------------
+  # Product Hero
+  ---------------------------------------*/
+
+#product-hero {
+  background: linear-gradient(
+    52.5deg,
+    #e5e8ef 0%,
+    rgba(145, 145, 145, 0) 78.52%
+  );
+  position: relative;
+  color: #fff;
+}
+
+.test-product-hero-container {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/pexels-karolina-grabowska-49597951.png");
+}
+
+.product-hero-container {
+  justify-content: center;
+  padding-top: 120px;
+}
+
+.product-hero-title {
+  align-items: baseline;
+}
+
+.iphone-product-hero {
+  position: relative;
+  top: 100px;
+}
+
+.iphone-product-img {
+  width: 337px;
+}
+
+.iphone-badge {
+  position: absolute;
+  width: 229px;
+  height: 80px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.iphone-badge-number {
+  font-size: 22px;
+  font-weight: 700;
+  color: #28417b;
+}
+
+.iphone-badge-align-img {
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.iphone-badge-align-text {
+  align-items: center;
+  text-align: left;
+  padding: 17px 14px 18px 5px;
+}
+
+.iphone-badge-text {
+  font-size: 16px;
+  line-height: 24px;
+  align-items: left;
+  color: #28417b;
+  padding: 0;
+}
+
+.iphone-badge-1 {
+  left: 0;
+  top: 107px;
+}
+
+.iphone-badge-2 {
+  left: 285px;
+  top: 271px;
+}
+
+.iphone-badge-3 {
+  left: 24px;
+  bottom: 126px;
+}
+/*-------------------------------------
+  # Product Discover
+  ---------------------------------------*/
+
+.test-product-bg-active {
+  min-height: 650px;
+  background: linear-gradient(180deg, rgba(229, 232, 239, 0) 0%, #c6d3f2 100%);
+}
+
+.test-product-bg-active > .container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.desktop-product-display {
+  display: none;
+}
+
+.test-mobile-box-container {
+  display: flex;
+  width: 100%;
+}
+
+/*-------------------------------------
+  # Product Download
+  ---------------------------------------*/
+
+.test-product-bg-transform {
+  background: linear-gradient(180deg, rgba(229, 232, 239, 0) 0%, #c6d3f2 100%);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/*-------------------------------------
+  # Product FAQ
+  ---------------------------------------*/
+
+.product-separator {
+  border: 1px solid #c6d3f2;
+  margin: 40px 0 53px 0;
+  width: 100%;
+}
+
+.test-product-faq {
+  padding-bottom: 100px;
+}
+
+.test-faq-bg-transform {
+  background: linear-gradient(180deg, rgba(229, 232, 239, 0) 0%, #c6d3f2 100%);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  z-index: -1;
+  width: 100%;
+  height: 934px;
+  position: absolute;
+  margin: -1px;
+}
+
+.test-faq-header {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 2px;
+  color: #28417b;
+  padding: 0 10px;
+}
+
+.test-faq-title {
+  text-transform: uppercase;
+}
+
+.wrapper {
+  margin-bottom: 20px;
+  padding-top: 40px;
+  border-radius: 5px;
+  color: #bc204b;
+}
+
+.toggle {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px 0;
+}
+
+.myImage {
+  position: absolute;
+  left: -30px;
+}
+
+.content {
+  position: relative;
+  font-size: 14px;
+  text-align: justify;
+  line-height: 30px;
+  height: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+/*-------------------------------------
+  # Product Banner
+  ---------------------------------------*/
+
+.banner {
+  background-color: #c6d3f2;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.banner-container {
+  padding-top: 40px;
+  padding-bottom: 43px;
+  padding-left: 80px;
+}
+
+.banner-email {
+  color: #28417b;
+  padding-top: 30px;
+}
+
+/*-------------------------------------
+  * Product Mobile Media Queries
+  --------------------------------------*/
+
+@media (max-width: 991px) {
+  .test-product-hero-container {
+    background-image: url("../img/Rectangle 135.png");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: inherit;
+  }
+
+  .product-hero-container {
+    justify-content: flex-start;
+    padding: 0px 33px;
+  }
+
+  .mobile-product-hero-title {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .iphone-product-hero {
+    max-width: fit-content;
+  }
+
+  .iphone-product-img {
+    width: 290px;
+    position: relative;
+    right: 45px;
+  }
+
+  .iphone-badge-1 {
+    left: 68px;
+    top: 60px;
+  }
+
+  .iphone-badge-2 {
+    left: 0;
+    top: 250px;
+  }
+
+  .iphone-badge-3 {
+    left: 68px;
+    bottom: 22px;
+    box-shadow: 14px 15px 55px 4px rgb(54 47 180 / 25%);
+  }
+
+  .tab-display {
+    display: none;
+  }
+
+  .mobile-product-display {
+    display: block;
+  }
+
+  .tab-title-mobile {
+    padding-top: 66px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .test-bg-transparent {
+    background: #e5ecfc;
+  }
+
+  .test-product-bg-discover {
+    min-height: 650px;
+    background: #e5ecfc;
+  }
+
+  .dots-container {
+    padding-top: 44px;
+    padding-bottom: 35px;
+  }
+
+  .swiper-pagination {
+    position: relative;
+    text-align: left;
+    padding-top: 44px;
+    padding-bottom: 35px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: none;
+    border: 1px solid #28417b;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #28417b;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide {
+    width: 83%;
+    border-radius: 20px;
+  }
+
+  .slide-padding {
+    padding-left: 40px;
+  }
+
+  .default-slide {
+    visibility: hidden;
+    max-height: 700px;
+    max-width: 10%;
+  }
+
+  .test-prod-carousel-content-2 {
+    flex-grow: 1;
+  }
+
+  .test-prod-carousel-content-1 {
+    min-height: 4.5em;
+  }
+
+  .test-prod-carousel-content-1,
+  .test-prod-carousel-content-2,
+  .test-prod-carousel-content-limit,
+  .test-prod-carousel-content-button {
+    display: block;
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    text-align: initial;
+  }
+
+  .test-faq-bg-transform {
+    background: linear-gradient(
+      180deg,
+      rgba(229, 232, 239, 0) 0%,
+      #e5ecfc 100%
+    );
+    height: 1884px;
+  }
+
+  .test-faq-header {
+    justify-content: flex-start;
+  }
+
+  .myImage {
+    position: relative;
+  }
+
+  .banner-container {
+    padding-left: 40px;
+  }
+
+  .banner-email {
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .slide-padding {
+    padding-left: 25px;
+  }
+}
