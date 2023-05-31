@@ -19,92 +19,42 @@ function displayMenu(event) {
     }
 }
 
-// TABS Home
-var myTabs = document.querySelectorAll(".test-tabs > .nav-tabs > a");
+// Back To Top
+const toTop = document.querySelector(".to-top");
 
-function myTabClicks(tabClickEvent) {
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active"); 
+  }
+})
 
-    for (var i = 0; i < myTabs.length; i++) {
-        myTabs[i].classList.remove("active");
-    }
+// Icon search input
+$(".searchbtn").on('click',function(){
+  if(!$(this).data('clicked')) {
+    $(this).addClass("add-input");
+    $('.test-button-language').addClass('d-none');
+    $('.navbar-nav').addClass('d-none');
+    $(".input").focus().addClass("active-width").val('');
+    $(".close-input").removeClass("d-none");
+    $('.test-nav').css('justify-content', 'center')
+    $(this).data('clicked', true);
+  }else {
+    $(this).addClass("add-input");
+    $(".input").focus().addClass("active-width").val('');
+    $('.test-button-language').addClass('d-none');
+    $('.navbar-nav').addClass('d-none');
+    $(".close-input").removeClass("d-none");
+    $(this).data('clicked', false);
+  }
+});
 
-    var clickedTab = tabClickEvent.currentTarget; 
-
-    clickedTab.classList.add("active");
-
-    tabClickEvent.preventDefault();
-
-    var myContentPanes = document.querySelectorAll(".tab-pane");
-
-    for (i = 0; i < myContentPanes.length; i++) {
-        myContentPanes[i].classList.remove("active");
-    }
-
-    var anchorReference = tabClickEvent.target;
-    var activePaneId = anchorReference.getAttribute("href");
-    var activePane = document.querySelector(activePaneId);
-
-    activePane.classList.add("active");
-
-}
-
-for (i = 0; i < myTabs.length; i++) {
-    myTabs[i].addEventListener("click", myTabClicks)
-}
-
-/// Accordion Discover
-var discoverAccordion = document.getElementsByClassName("discover-accordion");
-var i;
-
-for (i = 0; i < discoverAccordion.length; i++) {
-  discoverAccordion[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-
-    if(this.classList.contains("active")){
-      this.innerHTML = "<img class=\"btn_chevron\" src=\"img/chevron-up.png\" alt=\"chevron-up\"><span>Mostra meno</span>";
-    }else{
-      this.innerHTML = "<img class=\"btn_chevron\" src=\"img/chevron-down.png\" alt=\"chevron-down\"><span>Scopri e acquista</span>";
-    }
-
-    var content = this.nextElementSibling;
-
-    while(content) {
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-      content = content.nextElementSibling;
-    }
-    
-  });
-} 
-
-// FAQ Accordion
-let toggles = document.getElementsByClassName('toggle');
-let contentDiv = document.getElementsByClassName('content');
-let img = document.getElementsByClassName("myImage");
-
-for(let i=0; i<toggles.length; i++){
-    toggles[i].addEventListener('click', ()=>{
-        if( parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight){
-            contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
-            img[i].src = 'img/ic_mins.png';
-        }
-        else{
-            contentDiv[i].style.height = "0px";
-            img[i].src = 'img/ic_plus.png';
-        }
-    });
-}
-
-// Swiper Tab Mobile
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: "auto",
-  centeredSlidesBounds: true,
-  pagination: {
-    el: ".swiper-pagination",
-    type: 'bullets',
-    clickable: true,
-  },
+// Icon cclose input
+$(".close-input").on('click',function(){
+  $(".searchbtn").removeClass("add-input");
+  $('.test-button-language').removeClass('d-none');
+  $('.navbar-nav').removeClass('d-none');
+  $(".input").focus().removeClass("active-width").val('');
+  $(".close-input").addClass("d-none");
 });
