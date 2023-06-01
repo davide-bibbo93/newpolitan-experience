@@ -33,6 +33,35 @@ $(window).on("scroll", function() {
   }
 });
 
+
+/// Accordion Discover
+var discoverAccordion = document.getElementsByClassName("discover-accordion");
+var i;
+
+for (i = 0; i < discoverAccordion.length; i++) {
+  discoverAccordion[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+
+    if(this.classList.contains("active")){
+      this.innerHTML = "<span>Mostra meno</span>";
+    }else{
+      this.innerHTML = "<span>Scopri di più</span>";
+    }
+
+    var content = this.nextElementSibling;
+
+    while(content) {
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+      content = content.nextElementSibling;
+    }
+
+  });
+} 
+
 // Back To Top
 const toTop = document.querySelector(".to-top");
 
