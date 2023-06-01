@@ -19,9 +19,33 @@ body {
   # Header
   --------------------------------------*/
 
-  header li a:hover {
-    border-bottom: 2px solid #5e9fd5;
-  }
+header li a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+
+.header.active {
+  background: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.header.active ul li a {
+  color: #5e9fd5;
+}
+
+.header.active .test-button-language {
+  color: #5e9fd5;
+}
+
+.header.active li a:hover{
+  border-bottom: 2px solid #5e9fd5;
+}
+
+.header.active .test-input {
+  background: rgba(40, 65, 123, 0.1);
+}
 
 .test-seguici-m1 {
   margin-left: 15px;
@@ -31,16 +55,17 @@ body {
   line-height: 1;
 }
 .header ul li a {
-  color: #5e9fd5;
+  color: #fff;
   font-size: 14px;
 }
+
 .test-button-language {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background: rgba(40, 65, 123, 0.1);
   border-radius: 20px;
-  color: #5e9fd5;
+  color: #fff;
   font-size: 14px;
   padding: 12px 20px 12px 17px;
 }
@@ -89,7 +114,7 @@ body {
   color: #111111;
   white-space: nowrap;
   transition: 0.3s;
-  height: 80px;
+  height: 90px;
 }
 .navbar a i,
 .navbar a:focus i {
@@ -126,7 +151,7 @@ body {
 .searchbox .input{
   width: 0px;
   border: 0px;
-  height: 75px;
+  height: 67px;
   padding: 0px 35px;
   border-radius: 50px;
   outline: none;
@@ -694,6 +719,11 @@ a.to-top:hover {
   * Mobile Media Queries
   --------------------------------------*/
 @media (max-width: 991px) {
+
+  .header.active .test-button-language {
+    background-color: rgba(40, 65, 123, 0.1);
+  }
+
   .vesuvio-container {
     padding: 0 20px;
   }
@@ -727,11 +757,6 @@ a.to-top:hover {
     height: 100vh;
   }
 
-  .navbar ul li {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
   .navbar ul li a {
     font-weight: 400;
     font-size: 18px;
@@ -762,10 +787,12 @@ a.to-top:hover {
 
   .test-button-language {
     width: 100%;
+    background-color: #fff;
+    color: #5e9fd5;
   }
 
   .test-input {
-    background: rgba(40, 65, 123, 0.1);
+    background: #fff;
     border-radius: 20px;
     color: #000;
     font-size: 14px;
@@ -983,12 +1010,16 @@ a.to-top:hover {
   --------------------------------------*/
 @media (min-width: 992px) {
   #header {
-    background: #fff;
     transition: all 0.5s;
     z-index: 997;
     padding: 10px 0;
     height: 115px;
   }
+
+  .header {
+    background-color: rgba(255,255,255,0);
+  }
+  
   .test-nav-right-section {
     display: none;
   }

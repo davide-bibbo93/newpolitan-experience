@@ -19,6 +19,20 @@ function displayMenu(event) {
     }
 }
 
+
+
+$(window).on("scroll", function() {
+  if($(window).scrollTop() > 50) {
+      $(".header").addClass("active");
+      $('.header .test-logoBig').find('img').attr('src','img/neapolitan-exp.png').attr('alt','neapolitan-exp');
+      $('.header .test-hamburger').find('img').attr('src','img/hamburger-blue.webp').attr('alt','hamburger-blue');    
+  } else {
+     $(".header").removeClass("active");
+     $('.header .test-logoBig').find('img').attr('src','img/new-exp-white.png').attr('alt','new-exp-white');
+     $('.header .test-hamburger').find('img').attr('src','img/hamburger-white.png').attr('alt','hamburger-white');
+  }
+});
+
 // Back To Top
 const toTop = document.querySelector(".to-top");
 
